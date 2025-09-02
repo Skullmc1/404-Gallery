@@ -1,10 +1,10 @@
 const galleryData = [
   {
     id: '1',
-    title: 'Interstellar',
-    description: 'A 404 page that is lost in space.',
+    title: 'Brutalist Ink',
+    description: 'A bold, black and white design with gooey animations.',
     imageUrl: 'https://doodleipsum.com/700x700/avatar-2?i=e55bfe6738b49702e4605a37ae107423',
-    path: '/interstellar',
+    path: '/brutalist-ink',
   },
   {
     id: '2',

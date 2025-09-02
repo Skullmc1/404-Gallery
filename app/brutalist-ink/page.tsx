@@ -1,7 +1,8 @@
+"use client";
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const App = () => {
+const page = () => {
 
   const dotCount = 10;
 
@@ -113,4 +114,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default page;

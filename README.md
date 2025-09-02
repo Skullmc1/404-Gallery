@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 404 Gallery for Next.js
 
-## Getting Started
+A **404 gallery** built with **TypeScript** for **Next.js** projects.  
+This project provides multiple pre-made 404 pages (`page.tsx` files). To use one, simply rename it to `not-found.tsx` and place it in the same directory as your main `page.tsx`.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Built with **Next.js** and **TypeScript**
+- Fully responsive
+- Pre-made gallery pages for quick integration
+- Open-source and free to use
+
+## Usage
+
+1. Browse `https://404.qclid.space` and choose a 404 page.
+2. Find you're chosen 404 page as a `page.tsx` in this repository (App folder will have folders named after the 404 pages).
+3. Download it and rename it to `not-found.tsx`.
+4. Move it to where you're projects main `page.tsx` file is.
+5. Start your Next.js project; the new 404 gallery will automatically appear on any 404 route.
+
+Example:
+
+```
+/app
+ ├─ page.tsx        # Your main page
+ ├─ not-found.tsx   # Copied and renamed 404 gallery
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Customization
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Replace images or components inside the gallery as needed.
+- Modify animations, layout, or effects directly in the `not-found.tsx`.
+- Each page is independent, so you can swap them anytime.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## License
 
-To learn more about Next.js, take a look at the following resources:
+This project is **MIT licensed**. Anyone is free to use any of these galleries, **but please give credit** (if u want to) as shown below:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+Used in this project: 404 Gallery by Qclid
+or
+404 page by Qclid
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+or nothing is fine.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Support
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For questions or suggestions, open an issue on GitHub or reach out via your preferred contact method.

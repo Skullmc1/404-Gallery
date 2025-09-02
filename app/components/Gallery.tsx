@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import galleryData from '@/data/galleryData';
-
+import Link from 'next/link';
 
 // Gallery Component
 const Gallery: React.FC = () => {
@@ -105,23 +105,25 @@ const carouselVariants = {
             {galleryData
               .slice(currentIndex * itemsPerPage, (currentIndex + 1) * itemsPerPage)
               .map((item) => (
-                <div
-                  key={item.id}
+              <Link key={item.id} href={item.path} passHref>
+                <motion.div
                   className="relative w-full overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col group border-2 border-black"
                   style={{ paddingTop: '100%', position: 'relative' }}
+                  whileHover={{ scale: 1.05 }}
                 >
                   <div className="absolute inset-0">
                     <img
                       src={item.imageUrl}
                       alt={item.title}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                       <h3 className="text-xl font-bold text-white">{item.title}</h3>
                       <p className="text-sm mt-1 text-gray-200">{item.description}</p>
                     </div>
                   </div>
-                </div>
+                </motion.div>
+              </Link>
               ))}
           </motion.div>
         </AnimatePresence>

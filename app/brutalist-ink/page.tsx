@@ -1,9 +1,16 @@
-import React from 'react';
+"use client";
+import React, { useEffect, useState } from "react";
 import { motion } from 'framer-motion';
 
-const page = () => {
-
+const Page = () => {
   const dotCount = 10;
+
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+
+    useEffect(() => {
+    setDimensions({ width: window.innerWidth, height: window.innerHeight });
+    }, []);
+
 
   const generateRandomDotPosition = () => ({
     x: Math.random() * 200 - 100,
@@ -16,10 +23,11 @@ const page = () => {
     <motion.div
       key={i}
       className="absolute w-10 h-10 md:w-16 md:h-16 rounded-full bg-black shadow-lg"
-      initial={{ 
-        x: Math.random() * window.innerWidth - window.innerWidth / 2, 
-        y: Math.random() * window.innerHeight - window.innerHeight / 2,
-      }}
+        initial={{ 
+        x: Math.random() * dimensions.width - dimensions.width / 2, 
+        y: Math.random() * dimensions.height - dimensions.height / 2,
+        }}
+
       animate={{
         ...generateRandomDotPosition(),
       }}
@@ -99,7 +107,7 @@ const page = () => {
           It seems the page you were looking for doesn't exist. Let's get you back on track.
         </motion.p>
         <motion.a 
-          href="#"
+          href="/"
           initial={{ opacity: 0, scale: 0.8 }} 
           animate={{ opacity: 1, scale: 1 }} 
           transition={{ duration: 0.5, delay: 1.1 }}
@@ -113,4 +121,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
